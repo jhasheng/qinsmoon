@@ -48,19 +48,18 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ url('/role_permission') }}">Panel</a></li>
 
-                            <li><a href="{{ URL::route('roles.index') }}">Roles</a></li>
-                            <li><a href="{{ URL::route('permissions.index') }}">Permissions</a></li>
+                            <li><a href="{{ route('roles.index') }}">Roles</a></li>
+                            <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ URL::route('users.index') }}">Users</a></li>
-
+                    <li><a href="{{ route('users.index') }}">Users</a></li>
                     @endif
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
+						<li><a href="{{ url('/login') }}">Login</a></li>
+						<li><a href="{{ url('/register') }}">Register</a></li>
 					@else
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
