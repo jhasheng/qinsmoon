@@ -29,7 +29,7 @@ Route::group(['middleware' => ['auth', 'authorize']], function(){
 	Route::resource('users', 'UsersController');
 	Route::resource('roles', 'RolesController');
 	Route::resource('permissions', 'PermissionsController');
-	Route::get('/role_permission', 'RolesPermissionsController@index');
-	Route::post('/role_permission', 'RolesPermissionsController@store');
+	Route::get('/role_permission', ['uses' => 'RolesPermissionsController@index', 'as' => 'role.permission.index']);
+	Route::post('/role_permission', ['uses' => 'RolesPermissionsController@store', 'as' => 'role.permission.store']);
 });
 

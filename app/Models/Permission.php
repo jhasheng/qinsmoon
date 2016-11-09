@@ -2,27 +2,26 @@
 
 use Zizaco\Entrust\EntrustPermission;
 
-class Permission extends EntrustPermission {
+class Permission extends EntrustPermission
+{
 
-	/**
-	 * @var array
-	 */
-	protected $fillable = ['name', 'display_name', 'description'];
+    /**
+     * @var array
+     */
+    protected $fillable = ['name', 'display_name', 'description', 'route'];
 
-	/**
-	 * @param $roleName
-	 *
-	 * @return bool
-	 */
-	public function hasRole($roleName)
-	{
-		foreach($this->roles as $role)
-		{
-			if($role->name == $roleName)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+    /**
+     * @param $roleName
+     *
+     * @return bool
+     */
+    public function hasRole($roleName)
+    {
+        foreach ($this->roles as $role) {
+            if ($role->name == $roleName) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
