@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c27b5ba6018fe2e50313388736aab37",
-    "content-hash": "5e2dbd9ac7824c0f4cb780fbe3bf860a",
+    "hash": "3ffd29071294b45fc6c3f90784b62392",
+    "content-hash": "00a89bb0a70caf4c903839dbc38d9646",
     "packages": [
         {
             "name": "bosnadev/repositories",
@@ -220,51 +220,6 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
-        },
-        {
-            "name": "itsgoingd/clockwork",
-            "version": "v1.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/itsgoingd/clockwork.git",
-                "reference": "76488226d8fdeab29c1782a5a6c154403ad9cdcf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/itsgoingd/clockwork/76488226d8fdeab29c1782a5a6c154403ad9cdcf.zip",
-                "reference": "76488226d8fdeab29c1782a5a6c154403ad9cdcf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "psr/log": "1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clockwork\\": "Clockwork/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "itsgoingd",
-                    "email": "itsgoingd@luzer.sk",
-                    "homepage": "http://twitter.com/itsgoingd"
-                }
-            ],
-            "description": "Server-side component of Clockwork, a Chrome extension for PHP development",
-            "homepage": "http://github.com/itsgoingd/clockwork",
-            "keywords": [
-                "debugging",
-                "laravel",
-                "logging",
-                "profiling"
-            ],
-            "time": "2016-06-18 18:17:25"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2206,6 +2161,51 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "itsgoingd/clockwork",
+            "version": "v1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itsgoingd/clockwork.git",
+                "reference": "76488226d8fdeab29c1782a5a6c154403ad9cdcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/itsgoingd/clockwork/76488226d8fdeab29c1782a5a6c154403ad9cdcf.zip",
+                "reference": "76488226d8fdeab29c1782a5a6c154403ad9cdcf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "psr/log": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clockwork\\": "Clockwork/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "itsgoingd",
+                    "email": "itsgoingd@luzer.sk",
+                    "homepage": "http://twitter.com/itsgoingd"
+                }
+            ],
+            "description": "Server-side component of Clockwork, a Chrome extension for PHP development",
+            "homepage": "http://github.com/itsgoingd/clockwork",
+            "keywords": [
+                "debugging",
+                "laravel",
+                "logging",
+                "profiling"
+            ],
+            "time": "2016-06-18 18:17:25"
         },
         {
             "name": "mockery/mockery",
