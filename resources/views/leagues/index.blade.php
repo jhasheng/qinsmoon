@@ -10,7 +10,7 @@
             <th>League Level</th>
             <th>Server Name</th>
             <th>Server No.</th>
-            <th colspan="2"><a href="{{ URL::route('league.create') }}" class="btn btn-primary btn-block">Create</a></th>
+            <th colspan="2"><a href="{{ URL::route('leagues.create') }}" class="btn btn-primary btn-block">Create</a></th>
         </tr>
         </thead>
         <tbody>
@@ -21,9 +21,9 @@
                 <td>{{ $league->level }}</td>
                 <td>{{ $league->server_name }}</td>
                 <td>{{ $league->server_no }}</td>
-                <td width="80"><a class="btn btn-primary" href="{{ route('league.edit', $league->lid) }}">Edit</a></td>
-                <td width="80">{!! Form::open(['route' => ['league.update', $league->id], 'method' => 'DELETE']) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger', 'onclick' => 'return confirm("Are you sure?");']) !!}
+                <td width="80"><a class="btn btn-xs btn-primary" href="{{ route('leagues.edit', $league->lid) }}">Edit</a></td>
+                <td width="80">{!! Form::open(['route' => ['leagues.destroy', $league->lid], 'method' => 'DELETE']) !!}
+                    {!! Form::submit('Delete', ['class' => 'btn btn-xs btn-danger', 'onclick' => 'return confirm("Are you sure?");']) !!}
                     {!!  Form::close() !!}</td>
             </tr>
         @endforeach

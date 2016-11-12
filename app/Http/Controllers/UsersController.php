@@ -51,12 +51,9 @@ class UsersController extends Controller {
 	{
 		$user = $this->user->create($request->all());
 
-		if($request->get('role'))
-		{
+		if($request->get('role')) {
 			$user->roles()->sync($request->get('role'));
-		}
-		else
-		{
+		} else {
 			$user->roles()->sync([]);
 		}
 
@@ -85,25 +82,17 @@ class UsersController extends Controller {
 	public function update(UpdateUserRequest $request, $id)
 	{
 		$user = $this->user->find($id);
-
+		$user->name = $request->get('name');
 		$user->email = $request->get('email');
-		if($request->get('password'))
-		{
+
+		if($request->get('password')) {
 			$user->password = $request->get('password');
 		}
-		$user->save();
 
-		if($request->get('role'))
-		{
-			$user->roles()->sync($request->get('role'));
-		}
-		else
-		{
-			$user->roles()->sync([]);
-		}
+		$user->save();
+		$user->roles()->sync($request->get('role') ? $request->get('role') : []);
 
 		Flash::success('User successfully updated');
-
 		return redirect('/users');
 	}
 

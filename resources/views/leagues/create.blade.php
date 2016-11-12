@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    {!! Form::open(['route' => 'league.store']) !!}
+    {!! Form::open(['route' => 'leagues.store']) !!}
 
     <div class="form-group">
         {!! Form::label('name', 'Name') !!}

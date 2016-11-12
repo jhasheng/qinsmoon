@@ -25,7 +25,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['email', 'password'];
+	protected $fillable = ['email', 'password', 'name'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -48,8 +48,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	public function getLevelMax()
 	{
 		$roles = [];
-		foreach($this->roles as $role)
-		{
+		foreach($this->roles as $role) {
 			$roles[] = $role->level;
 		}
 

@@ -7,7 +7,7 @@ use App\Http\Requests;
 use App\Repositories\LeaguesRepository as Leagues;
 use Laracasts\Flash\Flash;
 
-class LeagueController extends Controller
+class LeaguesController extends Controller
 {
 
     private $leagues;
@@ -25,7 +25,7 @@ class LeagueController extends Controller
     {
         $leagues = $this->leagues->paginate(10);
 
-        return view('league.index', compact('leagues'));
+        return view('leagues.index', compact('leagues'));
     }
 
     /**
@@ -35,7 +35,7 @@ class LeagueController extends Controller
      */
     public function create()
     {
-        return view('league.create');
+        return view('leagues.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class LeagueController extends Controller
 
         Flash::success('League successfully created');
 
-        return redirect('/league');
+        return redirect('/leagues');
     }
 
     /**
@@ -74,7 +74,8 @@ class LeagueController extends Controller
      */
     public function edit($id)
     {
-        //
+        $league = $this->leagues->find($id);
+		return view('leagues.edit', compact('league'));
     }
 
     /**
@@ -86,7 +87,13 @@ class LeagueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		$this->validate($request, ['name' => 'required', 'server_name' => 'required', 'level' => 'required', 'uniqid' => 'required']);
+        $league = $this->leagues->find($id);
+        $league->update($request->all());
+
+        Flash::success('League successfully updated');
+
+        return redirect('/leagues');
     }
 
     /**
@@ -97,6 +104,9 @@ class LeagueController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->leagues->delete($id);
+        Flash::success('League successfully deleted');
+
+        return redirect('/leagues');
     }
 }

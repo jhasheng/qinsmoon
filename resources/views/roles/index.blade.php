@@ -26,10 +26,10 @@
                     @endforeach
                 </td>
                 @if( $role->id != 1)
-                    <td width="80"><a class="btn btn-primary" href="{{ URL::route('roles.edit', $role->id) }}">Edit</a></td>
+                    <td width="80"><a class="btn btn-xs btn-primary" href="{{ route('roles.edit', $role->id) }}">Edit</a></td>
 
                     <td width="80">{!! Form::open(['route' => ['roles.update', $role->id], 'method' => 'DELETE']) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger', 'onclick' => 'return confirm("Are you sure?");']) !!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-xs btn-danger', 'onclick' => 'return confirm("Are you sure?");']) !!}
                         {!!  Form::close() !!}</td>
                 @endif
             </tr>

@@ -17,10 +17,10 @@
                 <td>{{ $permission->id }}</td>
                 <td>{{ $permission->display_name }}</td>
                 <td>{{ $permission->name }}</td>
-                <td width="80"><a class="btn btn-primary" href="{{ URL::route('permissions.edit', $permission->id) }}">Edit</a></td>
+                <td width="80"><a class="btn btn-xs btn-primary" href="{{ URL::route('permissions.edit', $permission->id) }}">Edit</a></td>
                 <td width="80">{!! Form::open(['route' => ['permissions.update', $permission->id], 'method' => 'DELETE']) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger', 'onclick' => 'return confirm("Are you sure?");']) !!}
-                    {!!  Form::close() !!}</td>
+                    {!! Form::submit('Delete', ['class' => 'btn btn-xs btn-danger', 'onclick' => 'return confirm("Are you sure?");']) !!}
+                    {!! Form::close() !!}</td>
             </tr>
         @endforeach
         </tbody>
