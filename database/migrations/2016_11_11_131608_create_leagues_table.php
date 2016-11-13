@@ -32,8 +32,8 @@ class CreateLeaguesTable extends Migration
             $table->integer('enable_step', false, true)->comment('启用叫价固定值');
             $table->integer('step_point', false, true)->comment('叫价固定值');
             $table->integer('status', false, true)->comment('状态');
-            $table->integer('start_time', false, true)->comment('开始时间');
-            $table->integer('end_time', false, true)->comment('结束时间');
+            $table->timestamp('start_at')->comment('开始时间');
+            $table->timestamp('end_at')->comment('结束时间');
             $table->softDeletes();
             $table->timestamps();
         });

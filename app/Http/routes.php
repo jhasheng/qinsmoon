@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth', 'authorize']], function(){
 	Route::resource('roles', 'RolesController');
 	Route::resource('permissions', 'PermissionsController');
 	Route::resource('leagues', 'LeaguesController');
+	Route::resource('auctions', 'AuctionsController');
 	Route::get('/role_permission', ['uses' => 'RolesPermissionsController@index', 'as' => 'role.permission.index']);
 	Route::post('/role_permission', ['uses' => 'RolesPermissionsController@store', 'as' => 'role.permission.store']);
 });
