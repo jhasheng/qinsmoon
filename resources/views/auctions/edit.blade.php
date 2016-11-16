@@ -54,6 +54,7 @@
     </div>
 
     <div class="form-group">
+        {{--{!! Form::hidden('lid', Auth::user()->id) !!}--}}
         {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
     </div>
 

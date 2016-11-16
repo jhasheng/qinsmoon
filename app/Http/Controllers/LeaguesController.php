@@ -47,7 +47,12 @@ class LeaguesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required', 'server_name' => 'required', 'level' => 'required', 'uniqid' => 'required']);
+        $this->validate($request, [
+            'name'        => 'required',
+            'server_name' => 'required',
+            'level'       => 'required',
+            'uniqid'      => 'required',
+        ]);
 
         $this->leagues->create($request->all());
 
@@ -88,7 +93,12 @@ class LeaguesController extends Controller
      */
     public function update(Request $request, $id)
     {
-		$this->validate($request, ['name' => 'required', 'server_name' => 'required', 'level' => 'required', 'uniqid' => 'required']);
+        $this->validate($request, [
+            'name'        => 'required',
+            'server_name' => 'required',
+            'level'       => 'required',
+            'uniqid'      => 'required',
+        ]);
         $league = $this->leagues->find($id);
         $league->update($request->all());
 

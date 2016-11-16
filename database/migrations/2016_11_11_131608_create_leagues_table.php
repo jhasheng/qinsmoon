@@ -26,6 +26,7 @@ class CreateLeaguesTable extends Migration
 
         Schema::create('auctions', function (Blueprint $table) {
             $table->increments('aid');
+            $table->integer('lid')->comment('联盟ID');
             $table->string('name', 20)->comment('装备名称');
             $table->integer('min_point', false, true)->comment('最低价');
             $table->integer('max_point', false, true)->comment('最高价');

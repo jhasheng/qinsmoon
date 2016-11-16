@@ -2,8 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
-
 class AuctionsRequest extends Request
 {
     /**
@@ -24,9 +22,10 @@ class AuctionsRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name'      => 'required',
             'min_point' => 'required|numeric',
             'max_point' => 'required|numeric',
+            'lid'       => 'required|numeric'
         ];
     }
 }

@@ -11,5 +11,5 @@ class Auctions extends Model
     
     protected $primaryKey = 'aid';
 
-    protected $fillable = ['name', 'min_point', 'max_point', 'step_point', 'start_at', 'end_at', 'status'];
+    protected $fillable = ['name', 'min_point', 'max_point', 'step_point', 'start_at', 'end_at', 'status', 'lid'];
 }

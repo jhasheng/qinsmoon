@@ -79,10 +79,11 @@ class UsersController extends Controller {
 		return view('users.edit', compact('user', 'roles', 'userRoles'));
 	}
 
-	/**
-	 * @param $id
-	 * @param UpdateUserRequest $request
-	 */
+    /**
+     * @param                   $id
+     * @param UpdateUserRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
 	public function update(UpdateUserRequest $request, $id)
 	{
 		$user = $this->user->find($id);
@@ -100,9 +101,10 @@ class UsersController extends Controller {
 		return redirect('/users');
 	}
 
-	/**
-	 * @param $id
-	 */
+    /**
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
 	public function destroy($id)
 	{
 		$this->user->delete($id);
@@ -112,4 +114,8 @@ class UsersController extends Controller {
 		return redirect('/users');
 	}
 
+	public function show($id)
+    {
+        return view('users.show');
+    }
 }

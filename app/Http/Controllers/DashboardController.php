@@ -1,31 +1,29 @@
 <?php namespace App\Http\Controllers;
 
-class DashboardController extends Controller {
+use App\Repositories\AuctionsRepository as Auctions;
 
-	/*
-	|--------------------------------------------------------------------------
-	| Welcome Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders the "marketing page" for the application and
-	| is configured to only allow guests. Like most of the other sample
-	| controllers, you are free to modify or remove it as you desire.
-	|
-	*/
+class DashboardController extends Controller
+{
+    /**
+     * @var Auctions
+     */
+    private $auctions;
 
-	/**
-	 * Create a new controller instance.
-	 *
-	 */
-	public function __construct()
-	{
-		//$this->middleware('guest');
-		$this->middleware('auth', ['only' => 'logged']);
-	}
+    /**
+     * Create a new controller instance.
+     * @param Auctions $auctions
+     */
+    public function __construct(Auctions $auctions)
+    {
+        //$this->middleware('guest');
+        $this->middleware('auth', ['only' => 'logged']);
+        $this->auctions = $auctions;
+    }
 
-	public function index()
-	{
-		return view('dashboard.index');
-	}
+    public function index()
+    {
+
+        return view('dashboard.index');
+    }
 
 }
