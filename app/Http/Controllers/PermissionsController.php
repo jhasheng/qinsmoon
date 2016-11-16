@@ -3,7 +3,7 @@
 use App\Repositories\PermissionRepository as Permission;
 use App\Repositories\RoleRepository as Role;
 use Illuminate\Http\Request;
-use Laracasts\Flash\Flash;
+use Flash;
 
 class PermissionsController extends Controller
 {

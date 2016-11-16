@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Repositories\LeaguesRepository as Leagues;
-use Laracasts\Flash\Flash;
+use Illuminate\Http\Request;
+use Flash;
 
 class LeaguesController extends Controller
 {

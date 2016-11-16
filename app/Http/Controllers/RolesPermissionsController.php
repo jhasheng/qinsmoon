@@ -5,7 +5,7 @@ use App\Repositories\RoleRepository as Role;
 use App\Repositories\PermissionRepository as Permission;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Laracasts\Flash\Flash;
+use Flash;
 
 class RolesPermissionsController extends Controller
 {

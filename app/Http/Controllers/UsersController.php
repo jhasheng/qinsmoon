@@ -5,7 +5,7 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\Criteria\User\UsersWithRoles;
 use App\Repositories\UserRepository as User;
 use App\Repositories\RoleRepository as Role;
-use Laracasts\Flash\Flash;
+use Flash;
 
 class UsersController extends Controller {
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\AuctionsRepository;
 use App\Http\Requests\AuctionsRequest;
-use Laracasts\Flash\Flash;
+use Flash;
 
 class AuctionsController extends Controller
 {
@@ -87,7 +87,6 @@ class AuctionsController extends Controller
      */
     public function update(AuctionsRequest $request, $id)
     {
-        dd($request->all());
         $auction = $this->auctions->find($id);
         $auction->update($request->all());
 
