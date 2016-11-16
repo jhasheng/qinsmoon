@@ -9,6 +9,10 @@ use Flash;
 
 class UsersController extends Controller {
 
+    /**
+     * @var Role
+     */
+    protected $role;
 	/**
 	 * @var User
 	 */

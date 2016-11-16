@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\AuctionsRepository;
+use App\Repositories\AuctionsRepository as Auctions;
 use App\Http\Requests\AuctionsRequest;
 use Flash;
 
 class AuctionsController extends Controller
 {
     /**
-     * @var AuctionsRepository
+     * @var Auctions
      */
     protected $auctions;
 
-    public function __construct(AuctionsRepository $auctions)
+    public function __construct(Auctions $auctions)
     {
         $this->auctions = $auctions;
     }

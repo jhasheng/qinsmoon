@@ -8,7 +8,14 @@ use Flash;
 class PermissionsController extends Controller
 {
 
+    /**
+     * @var Role
+     */
     private $role;
+
+    /**
+     * @var Permission
+     */
     private $permission;
 
     public function __construct(Permission $permission, Role $role)

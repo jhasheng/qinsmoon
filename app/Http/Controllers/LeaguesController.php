@@ -8,7 +8,9 @@ use Flash;
 
 class LeaguesController extends Controller
 {
-
+    /**
+     * @var Leagues
+     */
     private $leagues;
 
     public function __construct(Leagues $leagues)
